@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from rangoapp import views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -7,7 +6,7 @@ from rangoapp import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'rangoapp.views.index', name='index'),
+    # url(r'^$', 'rango.views.home', name='home'),
     # url(r'^rango/', include('rango.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -15,4 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^rangoapp/', include('rangoapp.urls')),
 )
