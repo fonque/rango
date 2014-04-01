@@ -1,4 +1,5 @@
 # Django settings for rango project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -74,6 +75,11 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+SETTINGS_DIR = os.path.dirname(__file__)
+ProjectPath = os.path.join(SETTINGS_DIR, os.pardir)
+ProjectPath = os.path.abspath(ProjectPath)
+
+
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
@@ -107,10 +113,14 @@ ROOT_URLCONF = 'rango.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'rango.wsgi.application'
 
+
+
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/rango/templates'
 )
 
 INSTALLED_APPS = (
