@@ -78,6 +78,7 @@ STATICFILES_DIRS = (
 SETTINGS_DIR = os.path.dirname(__file__)
 ProjectPath = os.path.join(SETTINGS_DIR, os.pardir)
 ProjectPath = os.path.abspath(ProjectPath)
+TemplatePath = os.path.join(ProjectPath, 'templates')
 
 
 # List of finder classes that know how to find static files in
@@ -120,7 +121,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/rango/templates'
+    TemplatePath
 )
 
 INSTALLED_APPS = (
